@@ -2,7 +2,7 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import { Button } from './ui/button';
 import { ScrollArea } from './ui/scroll-area';
 import { Textarea } from './ui/textarea';
-import { MessageSquare, X, Send, Minimize2, Bot, User, Trash2, ArrowDown, Globe } from 'lucide-react';
+import { X, Send, Minimize2, Bot, User, Trash2, ArrowDown, Globe } from 'lucide-react';
 import { generateWebsiteSummary, getContactInfo } from '@/lib/website-info';
 
 interface Message {

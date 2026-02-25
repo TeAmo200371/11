@@ -50,12 +50,12 @@ export default defineConfig({
         target: 'https://open.bigmodel.cn',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/zhipu-api/, ''),
-        configure: (proxy, options) => {
-          proxy.on('proxyReq', (proxyReq, req, res) => {
+        configure: (proxy) => {
+          proxy.on('proxyReq', (proxyReq) => {
             proxyReq.setHeader('Authorization', 'Bearer ac5c620de85a4dd49d07e9bbcb838106.2znOjqMZAy3abY7S');
             console.log('[代理] 请求智谱AI:', proxyReq.path);
           });
-          proxy.on('proxyRes', (proxyRes, req, res) => {
+          proxy.on('proxyRes', (proxyRes) => {
             console.log('[代理] 智谱AI响应:', proxyRes.statusCode);
           });
         },
